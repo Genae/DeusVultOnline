@@ -160,9 +160,18 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\TroopsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\Die.cs" />
+    <Compile Include="Models\Formation.cs" />
+    <Compile Include="Models\Inventory.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Modifier.cs" />
+    <Compile Include="Models\Regiment.cs" />
+    <Compile Include="Models\Unit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -170,7 +179,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Pages\" />
     <Folder Include="Scripts\app\services\" />
   </ItemGroup>
