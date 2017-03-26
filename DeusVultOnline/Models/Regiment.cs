@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 
 namespace DeusVultOnline.Models
@@ -20,10 +19,10 @@ namespace DeusVultOnline.Models
 
         public override int GetMarshall()
         {
-            return Leader.Marshall;
+            return Leader?.Marshall??0;
         }
 
-        // public int Bonus => GetBonus();
+        public int MarshallBonus => GetBonus();
     }
 
     public class Regiment500 : ArmyGroup
@@ -64,7 +63,7 @@ namespace DeusVultOnline.Models
             {
                 return Parent.GetBonus() + GetMarshall();
             }
-            return Leader.Marshall;
+            return Leader?.Marshall??0;
         }
 
         public abstract int GetMarshall();

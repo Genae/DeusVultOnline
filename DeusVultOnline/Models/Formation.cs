@@ -27,7 +27,7 @@ namespace DeusVultOnline.Models
 
         public override bool IsValid(Regiment reg)
         {
-            return reg.Units.Count(u => u.Inventory.SecondaryWeapon.IsShield) > reg.Units.Count * 0.8 && reg.Units.Count > 50;
+            return reg.Units.Count(u => u.UnitType.Inventory.SecondaryWeapon.IsShield) > reg.Units.Count * 0.8 && reg.Units.Count > 50;
         }
     }
 }

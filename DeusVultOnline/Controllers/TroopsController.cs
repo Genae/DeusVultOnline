@@ -16,6 +16,7 @@ namespace DeusVultOnline.Controllers
         [Route("armyGroup/{id}")]
         public ArmyGroup GetArmyGroup(string id)
         {
+            //var objId = ObjectId.Parse(id);
             var testGroup = new Regiment500();
             for (var j = 0; j < 5; j++)
             {

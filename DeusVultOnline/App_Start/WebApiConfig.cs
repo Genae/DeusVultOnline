@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.Web.Http;
+using Newtonsoft.Json;
 
 namespace DeusVultOnline
 {
@@ -7,6 +9,10 @@ namespace DeusVultOnline
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings()
+            {
+                Converters = new List<JsonConverter> { new ObjectIdConverter() }
+            };
 
             // Web API routes
             config.MapHttpAttributeRoutes();
