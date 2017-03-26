@@ -186,6 +186,7 @@
     <Compile Include="Models\Formation.cs" />
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemProvider.cs" />
     <Compile Include="Models\Modifier.cs" />
     <Compile Include="Models\Regiment.cs" />
     <Compile Include="Models\Unit.cs" />
