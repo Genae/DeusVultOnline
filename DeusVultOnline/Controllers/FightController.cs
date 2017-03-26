@@ -35,7 +35,8 @@ namespace DeusVultOnline.Controllers
 
     public class Fight : KeyedDocument<Fight>
     {
-
+        public ObjectId TroopsPlayer1 { get; set; }
+        public ObjectId TroopsPlayer2 { get; set; }
     }
 
     public abstract class KeyedDocument<T> where T:KeyedDocument<T>
