@@ -33,5 +33,12 @@ namespace DeusVultOnline.Controllers
             }
             return testGroup;
         }
+
+        [Route("items")]
+        [HttpGet]
+        public Item[] GetItems()
+        {
+            return new ItemProvider().Weapons;
+        }
     }
 }

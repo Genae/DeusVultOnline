@@ -1,0 +1,9 @@
+.province {
+    stroke:black;
+    stroke-width:1
+}
+.province:hover{
+    stroke:red;
+    z-index: 100;
+    stroke-width: 3;
+}

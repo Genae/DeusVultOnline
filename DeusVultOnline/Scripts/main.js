@@ -3,22 +3,24 @@ require.config({
     paths: {
         //vendors
         "angular": 'vendors/angular/angular.min',
+        "angularRoute": 'vendors/angular/angular-route.min',
+        "angularResource": 'vendors/angular/angular-resource.min',
+        "angularAMD": 'vendors/angular/angularAMD.min',
+        "uiBootstrap": 'vendors/uiBootstrap/ui-bootstrap.min',
 
         //app
         "app": 'app/app',
 
         //controllers
-        "mainController": 'app/controllers/mainController'
+        "mainController": 'app/controllers/mainController',
+
+        //services
+        "troopsService": 'app/services/troopsService'
     },
     shim: {
-        "angular": {
-            exports: "angular"
-        }
-    }
+        'angularAMD': ['angular'],
+        'angularRoute': ['angular'],
+        'angularResource': ['angular']
+    },
+    deps: ['app']
 });
-
-require(['angular', 'app'],
-    function () {
-        angular.bootstrap(document, ['app']);
-    }
-);

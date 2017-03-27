@@ -163,14 +163,25 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="Pages\Home.html" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\controllers\mainController.js" />
+    <Content Include="Scripts\app\services\troopsService.js" />
+    <Content Include="Scripts\vendors\angular\angular-resource.min.js" />
+    <Content Include="Scripts\vendors\angular\angular-route.min.js" />
+    <Content Include="Scripts\vendors\angular\angularAMD.min.js" />
+    <Content Include="Scripts\vendors\angular\angularUiRouter.min.js" />
     <Content Include="Scripts\vendors\jquery\jquery-3.2.0.min.js" />
     <Content Include="Scripts\vendors\signalr\jquery.signalR-2.2.1.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\vendors\angular\angular.min.js" />
     <Content Include="Scripts\vendors\require\require.js" />
-    <Content Include="Web.config" />
+    <Content Include="Scripts\vendors\uiBootstrap\bootstrap.min.css" />
+    <Content Include="Scripts\vendors\uiBootstrap\ui-bootstrap.min.js" />
+    <Content Include="Style\main.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
@@ -198,10 +209,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\" />
-    <Folder Include="Scripts\app\services\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

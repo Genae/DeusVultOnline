@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Deus Vult Online</title>
+    <link rel="stylesheet" href="Scripts/vendors/uiBootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Style/main.css" />
     <script src="Scripts/vendors/jquery/jquery-3.2.0.min.js"></script>
     <script src="Scripts/vendors/signalr/jquery.signalR-2.2.1.min.js"></script>
     <script src="/signalr/hubs"></script>
     <script src="Scripts/vendors/require/require.js" data-main="Scripts/main.js"></script>
 </head>
-<body ng-controller="mainController">
-    {{message}}
+<body class="container">
+    <div ng-view></div>
 </body>
 </html>
