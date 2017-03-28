@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace DeusVultOnline.Models
 {
-    public class Regiment : ArmyGroup
+    public class Regiment100 : ArmyGroup
     {
         public int Moral
         {
