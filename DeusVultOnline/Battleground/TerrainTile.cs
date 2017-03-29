@@ -13,12 +13,14 @@ namespace DeusVultOnline.Battleground
     public class TerrainTile
     {
         public TerrainType Type { get; set; }
+        public Position Pos { get; set; }
 
         public Regiment100 Regiment { get; set; }
 
-        public TerrainTile(TerrainType type)
+        public TerrainTile(TerrainType type, Position pos)
         {
             Type = type;
+            Pos = pos;
             Regiment = null;
         }
         

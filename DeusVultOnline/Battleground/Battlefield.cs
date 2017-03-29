@@ -22,9 +22,27 @@ namespace DeusVultOnline.Battleground
             {
                 for (int y = 0; y < Size; y++)
                 {
-                    _battlefieldTiles[x, y] = new TerrainTile(TerrainType.Plain);
+                    _battlefieldTiles[x, y] = new TerrainTile(TerrainType.Plain, new Position(x, y));
                 }
             }
+        }
+
+        private List<TerrainTile> GetPositionsInRange(TerrainTile tile) //List of TerrainTiles or List of Positions? dunno whats better
+        {
+            var list = new List<TerrainTile>();
+            var movement = _battlefieldTiles[tile.Pos.X, tile.Pos.Y].Regiment.Movement;
+            var pos = tile.Pos;
+            for (int x = pos.X - movement; x < pos.X + movement; x++)
+            {
+                for (int y = pos.Y - movement; y < pos.Y + movement; y++)
+                {
+                    if(IsPositionEmpty(new Position(x, y)))
+                    {
+                        list.Add(_battlefieldTiles[x, y]);
+                    }
+                }
+            }
+            return list;
         }
 
         private bool IsPositionEmpty(Position pos)

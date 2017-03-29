@@ -11,6 +11,11 @@ namespace DeusVultOnline.Models
             get { return Units.Sum(x => x.Moral)/Units.Count; }
         }
 
+        public int Movement
+        {
+            get { return Units.Min(x => x.Movement); }
+        }
+
         [JsonIgnore]
         public List<Unit> Units { get; set; } = new List<Unit>();
 
