@@ -14,8 +14,6 @@ namespace DeusVultOnline.Models
         public int BombardAC { get; set; }
         public int Attack { get; set; }
 
-
-
         public List<Modifier> Modifiers;
 
         public UnitType UnitType;
