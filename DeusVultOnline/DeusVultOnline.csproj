@@ -43,61 +43,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MongoDB.Bson, Version=2.4.3.23, Culture=neutral, processorArchitecture=MSIL">
@@ -121,26 +96,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
       <Private>True</Private>
@@ -186,9 +149,14 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Authentication\SignInManager.cs" />
     <Compile Include="Battleground\Battlefield.cs" />
+    <Compile Include="Authentication\User.cs" />
+    <Compile Include="Authentication\UserManager.cs" />
+    <Compile Include="Authentication\UserStore.cs" />
     <Compile Include="Battleground\Position.cs" />
     <Compile Include="Battleground\TerrainTile.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FightController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\TroopsController.cs" />
@@ -224,7 +192,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52341</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
