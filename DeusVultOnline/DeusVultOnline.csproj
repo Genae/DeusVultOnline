@@ -150,6 +150,7 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Authentication\SignInManager.cs" />
+    <Compile Include="Battleground\Battlefield.cs" />
     <Compile Include="Authentication\User.cs" />
     <Compile Include="Authentication\UserManager.cs" />
     <Compile Include="Authentication\UserStore.cs" />

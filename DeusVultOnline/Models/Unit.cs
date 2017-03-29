@@ -8,10 +8,13 @@ namespace DeusVultOnline.Models
         public int Experience { get; set; }
         public int Moral { get; set; }
 
+        public int Movement { get; set; }
         public int MeleeAC { get; set; }
         public int RangedAC { get; set; }
         public int BombardAC { get; set; }
         public int Attack { get; set; }
+
+
 
         public List<Modifier> Modifiers;
 

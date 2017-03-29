@@ -20,7 +20,7 @@ namespace DeusVultOnline.Controllers
             var testGroup = new Regiment500();
             for (var j = 0; j < 5; j++)
             {
-                var testReg = new Regiment();
+                var testReg = new Regiment100();
                 testGroup.AddChild(testReg);
                 testReg.Fromation = new TurtleFormation();
                 for (int i = 0; i < 100; i++)

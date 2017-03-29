@@ -16,7 +16,7 @@ namespace DeusVultOnline.Models
             Modifiers = modifiers;
         }
 
-        public abstract bool IsValid(Regiment reg);
+        public abstract bool IsValid(Regiment100 reg);
     }
 
     public class TurtleFormation : Formation
@@ -25,7 +25,7 @@ namespace DeusVultOnline.Models
         {
         }
 
-        public override bool IsValid(Regiment reg)
+        public override bool IsValid(Regiment100 reg)
         {
             return reg.Units.Count(u => u.UnitType.Inventory.SecondaryWeapon.IsShield) > reg.Units.Count * 0.8 && reg.Units.Count > 50;
         }
