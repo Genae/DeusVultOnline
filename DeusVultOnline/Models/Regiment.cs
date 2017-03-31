@@ -4,8 +4,31 @@ using Newtonsoft.Json;
 
 namespace DeusVultOnline.Models
 {
+    public struct UnitGroup
+    {
+        public UnitGroup(UnitType type, int amount)
+        {
+            Type = type;
+            Amount = amount;
+        }
+        public UnitType Type;
+        public int Amount;
+    }
+
     public class Regiment100 : ArmyGroup
     {
+        public Regiment100(List<UnitGroup> grouplist)
+        {
+            Units = new List<Unit>();
+            foreach (var group in grouplist)
+            {
+                for (int i = 0; i < group.Amount; i++)
+                {
+                    Units.Add(new Unit(group.Type));
+                }
+            }
+        }
+
         public int Moral
         {
             get { return Units.Sum(x => x.Moral)/Units.Count; }
@@ -17,9 +40,10 @@ namespace DeusVultOnline.Models
         }
 
         [JsonIgnore]
-        public List<Unit> Units { get; set; } = new List<Unit>();
+        public List<Unit> Units { get; set; }
 
         public int UnitCount => Units.Count;
+
         public Formation Fromation { get; set; }
 
         public override int GetMarshall()

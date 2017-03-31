@@ -36,26 +36,21 @@ namespace DeusVultOnline
 
         private void TestShit()//YEY
         {
-            var battlefield = new Battlefield(9);
+            var battlefield = new Battlefield(50);
 
-            var tile = battlefield.BattlefieldTiles[5, 5];
-            tile.Regiment = new Regiment100();
-            var reg = tile.Regiment;
-            reg.Units = new List<Unit>();
-            reg.Units.Add(new Unit());
-            reg.Units[0].Movement = 5;
+            var tile = battlefield.BattlefieldTiles[0, 0];
+            var ulist = new List<UnitGroup>();
+            ulist.Add(new UnitGroup(new UnitType(new Inventory(), 1), 100));
+            tile.Regiment = new Regiment100(ulist);
 
-            /*var tile2 = battlefield.BattlefieldTiles[0, 0];
-            tile2.Regiment = new Regiment100();
-            var reg2 = tile.Regiment;
-            reg2.Units = new List<Unit>();
-            reg2.Units.Add(new Unit());
-            reg2.Units[0].Movement = 1;*/
+
+            var tile2 = battlefield.BattlefieldTiles[0, 1];
+            var ulist2 = new List<UnitGroup>();
+            ulist2.Add(new UnitGroup(new UnitType(new Inventory(), 1), 100));
+            tile2.Regiment = new Regiment100(ulist2);
 
 
             var list = battlefield.GetPositionsInRange(tile);
-            //PRIME EXAMPLE OF WHAT HAPPENS IF YOU USE BLACK MAGIC, IT IS JUST EVIL STEFAN PLS EXPLAIN
-            //who needs constructors anyways : >
         }
     }
 }

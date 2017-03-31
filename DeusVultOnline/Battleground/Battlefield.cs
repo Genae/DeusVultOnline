@@ -27,7 +27,7 @@ namespace DeusVultOnline.Battleground
             }
         }
 
-        public List<TerrainTile> GetPositionsInRange(TerrainTile tile) //List of TerrainTiles or List of Positions? dunno whats better
+        public List<TerrainTile> GetPositionsInRange(TerrainTile tile) 
         {
             var list = new List<TerrainTile>();
             var movement = BattlefieldTiles[tile.Pos.X, tile.Pos.Y].Regiment.Movement;

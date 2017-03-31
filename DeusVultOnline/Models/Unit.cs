@@ -4,6 +4,18 @@ namespace DeusVultOnline.Models
 {
     public class Unit
     {
+        public Unit(){ } //bad fix for Character class error
+
+        public Unit(UnitType unitType)
+        {
+            Health = 10;
+            Experience = 0;
+            Moral = 1;
+            Movement = 1;
+
+            UnitType = unitType;
+        }
+
         public int Health { get; set; }
         public int Experience { get; set; }
         public int Moral { get; set; }
@@ -27,6 +39,11 @@ namespace DeusVultOnline.Models
 
     public class UnitType
     {
+        public UnitType(Inventory inventory, int frontwidth)
+        {
+            Inventory = inventory;
+            FrontWidth = frontwidth;
+        }
         public int FrontWidth { get; set; } = 1; //Space occupied on Front: default 1
         public Inventory Inventory;
     }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Web.Http;
 using DeusVultOnline.Models;
 
@@ -20,16 +21,12 @@ namespace DeusVultOnline.Controllers
             var testGroup = new Regiment500();
             for (var j = 0; j < 5; j++)
             {
-                var testReg = new Regiment100();
+                var ulist = new List<UnitGroup>();
+                ulist.Add(new UnitGroup(new UnitType(new Inventory(), 1), 100));
+                var testReg = new Regiment100(ulist);
+
                 testGroup.AddChild(testReg);
                 testReg.Fromation = new TurtleFormation();
-                for (int i = 0; i < 100; i++)
-                {
-                    testReg.Units.Add(new Unit()
-                    {
-                        Attack = 1
-                    });
-                }
             }
             return testGroup;
         }

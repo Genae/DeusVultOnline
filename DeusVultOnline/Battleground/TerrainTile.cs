@@ -6,8 +6,7 @@ namespace DeusVultOnline.Battleground
     {
         Plain, 
         Hill,
-        Mountain,
-        Default
+        Mountain
     }
 
     public class TerrainTile
