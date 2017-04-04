@@ -12,7 +12,6 @@ define(['app', 'troopsService'], function (app) {
         $scope.message = troopsService.Items.query(function(result) {
             $scope.items = result;
         });
-
         $scope.clicked = function(province) {
             console.log(province.name);
         }

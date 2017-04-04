@@ -94,6 +94,10 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+	<Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
       <HintPath>..\packages\Swashbuckle.Core.5.5.3\lib\net40\Swashbuckle.Core.dll</HintPath>
       <Private>True</Private>
@@ -130,8 +134,11 @@
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Pages\Home.html" />
+    <Content Include="Pages\Login.html" />
     <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\controllers\loginController.js" />
     <Content Include="Scripts\app\controllers\mainController.js" />
+    <Content Include="Scripts\app\services\accountService.js" />
     <Content Include="Scripts\app\services\troopsService.js" />
     <Content Include="Scripts\vendors\angular\angular-resource.min.js" />
     <Content Include="Scripts\vendors\angular\angular-route.min.js" />
