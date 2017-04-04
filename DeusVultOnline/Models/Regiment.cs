@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using DeusVultOnline.Characters;
 using Newtonsoft.Json;
 
 namespace DeusVultOnline.Models
@@ -48,7 +49,7 @@ namespace DeusVultOnline.Models
 
         public override int GetMarshall()
         {
-            return Leader?.Marshall??0;
+            return Leader.Marshall?.Total ?? 0;
         }
 
         public int MarshallBonus => GetBonus();
@@ -58,7 +59,7 @@ namespace DeusVultOnline.Models
     {
         public override int GetMarshall()
         {
-            return (Leader.Marshall - 8)/4;
+            return (Leader.Marshall.Total - 8)/4;
         }
     }
 
@@ -66,7 +67,7 @@ namespace DeusVultOnline.Models
     {
         public override int GetMarshall()
         {
-            return (Leader.Marshall - 12) / 6;
+            return (Leader.Marshall.Total - 12) / 6;
         }
     }
 
@@ -74,7 +75,7 @@ namespace DeusVultOnline.Models
     {
         public override int GetMarshall()
         {
-            return (Leader.Marshall - 16) / 10;
+            return (Leader.Marshall.Total - 16) / 10;
         }
     }
 
@@ -92,7 +93,7 @@ namespace DeusVultOnline.Models
             {
                 return Parent.GetBonus() + GetMarshall();
             }
-            return Leader?.Marshall??0;
+            return Leader.Marshall?.Total ?? 0;
         }
 
         public abstract int GetMarshall();
