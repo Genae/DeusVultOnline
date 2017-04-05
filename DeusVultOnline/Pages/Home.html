@@ -17,3 +17,9 @@
 <svg height="210" width="500" style="background-color: black">
     <polygon points="{{province.polygon}}" class="province" ng-repeat="province in provinces" ng-click="clicked(province)" ng-style="{'fill': province.color}"/>
 </svg>
+
+<ul>
+    <li ng-repeat="x in baseArmies">
+        {{ 'Leader' + x.Leader + ', Moral: ' + x.Moral + ' Movement ' + x.Movement + ' MarshallBonus ' + x.MarshallBonus}}
+    </li>
+</ul>
