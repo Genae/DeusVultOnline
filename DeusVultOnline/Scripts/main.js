@@ -13,9 +13,11 @@ require.config({
 
         //controllers
         "mainController": 'app/controllers/mainController',
+        "loginController": 'app/controllers/loginController',
 
         //services
-        "troopsService": 'app/services/troopsService'
+        "troopsService": 'app/services/troopsService',
+        "accountService": 'app/services/accountService'
     },
     shim: {
         'angularAMD': ['angular'],

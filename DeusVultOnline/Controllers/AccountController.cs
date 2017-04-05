@@ -1,12 +1,13 @@
 using System;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Management;
 using DeusVultOnline.Authentication;
 using Microsoft.AspNet.Identity.Owin;
 
 namespace DeusVultOnline.Controllers
 {
-    [RoutePrefix("account")]
+    [RoutePrefix("api/account")]
     public class AccountController : ApiController
     {
         public UserManager UserManager => Request.GetOwinContext().GetUserManager<UserManager>();
@@ -28,19 +29,19 @@ namespace DeusVultOnline.Controllers
 
         [HttpPost]
         [Route("signin")]
-        public IHttpActionResult SignIn(SignInContract signInContract)
+        public SignInResult SignIn(SignInContract signInContract)
         {
             var signInStatus = SignInManager.PasswordSignInAsync(signInContract.UserName, signInContract.Password, true, false).Result;
             switch (signInStatus)
             {
                 case SignInStatus.Success:
-                    return Ok();
+                    return new SignInResult(true);
                 case SignInStatus.LockedOut:
-                    return BadRequest("User Locked out");
+                    return new SignInResult(false, "User Locked out");
                 case SignInStatus.RequiresVerification:
-                    return BadRequest("Please Confirm your Email first.");
+                    return new SignInResult(false, "Please Confirm your Email first.");
                 case SignInStatus.Failure:
-                    return BadRequest("Wrong Username or Password");
+                    return new SignInResult(false, "Wrong Username or Password");
                 default:
                     throw new ArgumentOutOfRangeException();
             }
@@ -55,6 +56,18 @@ namespace DeusVultOnline.Controllers
             SignInManager.SignInAsync(user, false, false).GetAwaiter().GetResult();
             return Ok();
              */
+        }
+    }
+
+    public class SignInResult
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; }
+
+        public SignInResult(bool success, string message = "")
+        {
+            Success = success;
+            Message = message;
         }
     }
 

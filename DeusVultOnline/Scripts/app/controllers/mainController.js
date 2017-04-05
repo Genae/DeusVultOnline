@@ -17,7 +17,6 @@ define(['app', 'troopsService'], function (app) {
         $scope.message = troopsService.Items.query(function(result) {
             $scope.items = result;
         });
-
         troopsService.ArmyGroup.get({ id: "asdf" }, processArmyGroupRequest);
 
         $scope.clicked = function(province) {
