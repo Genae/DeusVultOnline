@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Web.Http;
+using DeusVultOnline.Characters;
 using DeusVultOnline.Models;
 
 namespace DeusVultOnline.Controllers
@@ -19,11 +20,13 @@ namespace DeusVultOnline.Controllers
         {
             //var objId = ObjectId.Parse(id);
             var testGroup = new Regiment500();
+                testGroup.Leader = new Character();
             for (var j = 0; j < 5; j++)
             {
                 var ulist = new List<UnitGroup>();
                 ulist.Add(new UnitGroup(new UnitType(new Inventory(), 1), 100));
                 var testReg = new Regiment100(ulist);
+                testReg.Leader = new Character();
 
                 testGroup.AddChild(testReg);
                 testReg.Fromation = new TurtleFormation();
