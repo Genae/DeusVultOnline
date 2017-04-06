@@ -16,6 +16,15 @@ define(['app', 'accountService'], function (app) {
                 passwordConfirm: $scope.password2
             }, function (result) {
                 $scope.error = result.Message;
+                if (result.Success) {
+                    var previousUrl = $rootScope.previousPage;
+                    if (previousUrl.indexOf('/#/login') === -1) {
+                        $location.path(previousUrl);
+                    }
+                    else {
+                        $location.path('/');
+                    }
+                }
             });
         }
         $scope.login = function () {
@@ -28,7 +37,7 @@ define(['app', 'accountService'], function (app) {
                 if (result.Success) {
                     var previousUrl = $rootScope.previousPage;
                     if (previousUrl.indexOf('/#/login') === -1) {
-                        $location.path(path);
+                        $location.path(previousUrl);
                     }
                     else {
                         $location.path('/');
