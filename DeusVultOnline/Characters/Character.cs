@@ -1,8 +1,9 @@
 using System;
+using DeusVultOnline.Controllers;
 
 namespace DeusVultOnline.Characters
 {
-    public class Character
+    public class Character : KeyedDocument<Character>
     {
         #region privateAttr
         private int _genSize;
@@ -14,12 +15,30 @@ namespace DeusVultOnline.Characters
 
         #endregion
 
-        
         public string Name { get; set; }
         public DateTime Birthday { get; set; }
         public Gender Gender { get; set; }
-        public Religion Religion { get; set; }
-        
+
+        protected Religion Religion { get; set; }
+        protected int ReligionLevel { get; set; }
+        protected string ReligionRank => ReligionLevel==0?"":Religion.RankName[ReligionLevel];
+        protected int ReligionSpellLevel => ReligionLevel == 0 ? 0 : Religion.SpellLevel[ReligionLevel];
+
+        public void SetReligion(Religion rel, int lvl)
+        {
+            Religion = rel;
+            ReligionLevel = lvl;
+
+            var faithAttr = rel.Faith[lvl];
+            foreach (var i in faithAttr)
+            {
+                var attribute = GetType().GetProperty(i.Key).GetValue(this) as Attribute;
+                if (attribute != null)
+                    attribute.Faith = i.Value;
+            }
+
+        }
+
         #region InitGenetics
         public int GenSize
         {

@@ -167,9 +167,9 @@
     <Compile Include="Battleground\Position.cs" />
     <Compile Include="Battleground\TerrainTile.cs" />
     <Compile Include="Characters\Attribute.cs" />
-    <Compile Include="Characters\CombatStats.cs" />
     <Compile Include="Characters\Gender.cs" />
     <Compile Include="Characters\Religion.cs" />
+    <Compile Include="Characters\ReligionProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\FightController.cs" />
