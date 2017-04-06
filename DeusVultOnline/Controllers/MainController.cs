@@ -3,7 +3,7 @@ using System.Web.Http;
 namespace DeusVultOnline.Controllers
 {
     [RoutePrefix("api/main")]
-    public class MainController : ApiController
+    public class MainController : BaseController
     {
         [Route("string")]
         [HttpGet]

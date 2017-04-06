@@ -6,7 +6,7 @@ using MongoDB.Driver;
 namespace DeusVultOnline.Controllers
 {
     [RoutePrefix("api/fight")]
-    public class FightController : ApiController
+    public class FightController : BaseController
     {
         [Route("start")]
         [HttpPost]

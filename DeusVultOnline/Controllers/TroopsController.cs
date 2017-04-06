@@ -6,7 +6,7 @@ using DeusVultOnline.Models;
 namespace DeusVultOnline.Controllers
 {
     [RoutePrefix("api/troops")]
-    public class TroopsController : ApiController
+    public class TroopsController : BaseController
     {
         [Route("formation")]
         [HttpGet]

@@ -171,6 +171,7 @@
     <Compile Include="Characters\Gender.cs" />
     <Compile Include="Characters\Religion.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\FightController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\TroopsController.cs" />

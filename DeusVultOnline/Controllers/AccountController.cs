@@ -8,40 +8,42 @@ using Microsoft.AspNet.Identity.Owin;
 namespace DeusVultOnline.Controllers
 {
     [RoutePrefix("api/account")]
-    public class AccountController : ApiController
+    public class AccountController : BaseController
     {
         public UserManager UserManager => Request.GetOwinContext().GetUserManager<UserManager>();
         public SignInManager SignInManager => Request.GetOwinContext().Get<SignInManager>();
 
         [HttpPost]
+        [AllowAnonymous]
         [Route("register")]
-        public IHttpActionResult CreateUser(UserContract userContract)
+        public ActionResult CreateUser(UserContract userContract)
         {
             if (!userContract.Password.Equals(userContract.PasswordConfirm))
-                return BadRequest("Passwords did not match");
+                return new ActionResult(false, "Passwords did not match");
             var user = new User() { UserName = userContract.UserName, EmailAddress = userContract.EmailAdress };
             var res = UserManager.CreateAsync(user, userContract.Password).Result;
             if(!res.Succeeded)
-                return BadRequest(string.Concat(res.Errors));
+                return new ActionResult(false, string.Concat(res.Errors));
             SignInManager.SignInAsync(user, false, false).GetAwaiter().GetResult();
-            return Ok();
+            return new ActionResult(true);
         }
 
         [HttpPost]
+        [AllowAnonymous]
         [Route("signin")]
-        public SignInResult SignIn(SignInContract signInContract)
+        public ActionResult SignIn(SignInContract signInContract)
         {
             var signInStatus = SignInManager.PasswordSignInAsync(signInContract.UserName, signInContract.Password, true, false).Result;
             switch (signInStatus)
             {
                 case SignInStatus.Success:
-                    return new SignInResult(true);
+                    return new ActionResult(true);
                 case SignInStatus.LockedOut:
-                    return new SignInResult(false, "User Locked out");
+                    return new ActionResult(false, "User Locked out");
                 case SignInStatus.RequiresVerification:
-                    return new SignInResult(false, "Please Confirm your Email first.");
+                    return new ActionResult(false, "Please Confirm your Email first.");
                 case SignInStatus.Failure:
-                    return new SignInResult(false, "Wrong Username or Password");
+                    return new ActionResult(false, "Wrong Username or Password");
                 default:
                     throw new ArgumentOutOfRangeException();
             }
@@ -59,12 +61,12 @@ namespace DeusVultOnline.Controllers
         }
     }
 
-    public class SignInResult
+    public class ActionResult
     {
         public bool Success { get; set; }
         public string Message { get; set; }
 
-        public SignInResult(bool success, string message = "")
+        public ActionResult(bool success, string message = "")
         {
             Success = success;
             Message = message;

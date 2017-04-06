@@ -25,7 +25,6 @@ namespace DeusVultOnline
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("/"),
                 Provider = new CookieAuthenticationProvider()
             });
             app.UseWebApi(config);
