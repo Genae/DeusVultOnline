@@ -98,7 +98,7 @@
       <HintPath>..\packages\Swashbuckle.Core.5.5.3\lib\net40\Swashbuckle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-		<Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
       <Private>True</Private>
     </Reference>
@@ -167,6 +167,7 @@
     <Compile Include="Battleground\Position.cs" />
     <Compile Include="Battleground\TerrainTile.cs" />
     <Compile Include="Characters\Attribute.cs" />
+    <Compile Include="Characters\CombatStats.cs" />
     <Compile Include="Characters\Gender.cs" />
     <Compile Include="Characters\Religion.cs" />
     <Compile Include="Controllers\AccountController.cs" />

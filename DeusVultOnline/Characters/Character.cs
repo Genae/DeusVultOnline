@@ -14,11 +14,13 @@ namespace DeusVultOnline.Characters
 
         #endregion
 
+        
         public string Name { get; set; }
         public DateTime Birthday { get; set; }
         public Gender Gender { get; set; }
         public Religion Religion { get; set; }
-
+        
+        #region InitGenetics
         public int GenSize
         {
             get { return _genSize; }
@@ -70,7 +72,7 @@ namespace DeusVultOnline.Characters
             get { return _genToughness; }
             set
             {
-                //TODO +1AC
+                Armor.Gen += value - _genToughness;
                 _genToughness = value;
             }
         }
@@ -84,6 +86,7 @@ namespace DeusVultOnline.Characters
                 _genMagic = value;
             }
         }
+        #endregion
 
         public enum AttributeType
         {
@@ -98,6 +101,9 @@ namespace DeusVultOnline.Characters
             Combat
         }
 
+        public AttributeType Focus { get; set; }
+
+        //Attributes
         public Attribute Marshall { get; set; }
         public Attribute Diplomacy { get; set; }
         public Attribute Stewardship { get; set; }
@@ -107,6 +113,13 @@ namespace DeusVultOnline.Characters
         public Attribute Magic { get; set; }
         public Attribute Attraction { get; set; }
         public Attribute Combat { get; set; }
+        //CombatAttributes
+        public Attribute Health { get; set; }
+        public Attribute Attack { get; set; }
+        public Attribute Dualwield { get; set; }
+        public Attribute Technique { get; set; }
+        public Attribute Armor { get; set; }
 
     }
+
 }
