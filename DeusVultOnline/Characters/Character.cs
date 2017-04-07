@@ -19,7 +19,7 @@ namespace DeusVultOnline.Characters
         public DateTime Birthday { get; set; }
         public Gender Gender { get; set; }
 
-        protected Religion Religion { get; set; }
+        public Religion Religion { get; protected set; }
         protected int ReligionLevel { get; set; }
         protected string ReligionRank => ReligionLevel==0?"":Religion.RankName[ReligionLevel];
         protected int ReligionSpellLevel => ReligionLevel == 0 ? 0 : Religion.SpellLevel[ReligionLevel];
@@ -117,15 +117,15 @@ namespace DeusVultOnline.Characters
             Arts,
             Magic,
             Attraction,
-            Combat
+            Combta
         }
 
-        public AttributeType Focus { get; set; }
+        public AttributeType Focus { get; set;} 
 
         //Attributes
-        public Attribute Marshall { get; set; }
-        public Attribute Diplomacy { get; set; }
-        public Attribute Stewardship { get; set; }
+        public Attribute Marshall { get; set;} 
+        public Attribute Diplomacy { get; set;} 
+        public Attribute Stewardship { get; set;} 
         public Attribute Intrigue { get; set; }
         public Attribute Learning { get; set; }
         public Attribute Arts { get; set; }

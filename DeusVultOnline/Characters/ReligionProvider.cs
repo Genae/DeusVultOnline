@@ -4,7 +4,7 @@ namespace DeusVultOnline.Characters
 {
     public class ReligionProvider
     {
-        public Religion[] Religions =
+        public static Religion[] Religions =
         {
             new Religion
             {

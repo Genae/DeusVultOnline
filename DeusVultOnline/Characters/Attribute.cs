@@ -16,8 +16,7 @@ namespace DeusVultOnline.Characters
         public int Skill { get; set; }
         public int Equip { get; set; }
         //Total values
-        public int Total => (Base + Gen + Edu + Faith + Lifest + Temp + Bonus);
-        public int CombatTotal => (Skill + Faith + Gen + Bonus);
+        public int Total => (Base + Gen + Edu + Faith + Lifest + Temp + Bonus + Skill);
     }
 
 }

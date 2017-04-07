@@ -18,6 +18,7 @@ namespace DeusVultOnline
         {
             HttpConfiguration config = new HttpConfiguration();
             config.MapHttpAttributeRoutes();
+            config.Formatters.JsonFormatter.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
 
             app.CreatePerOwinContext<UserManager>(UserManager.Create);
             app.CreatePerOwinContext<SignInManager>(SignInManager.Create);

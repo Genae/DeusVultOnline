@@ -23,8 +23,8 @@ namespace DeusVultOnline.Characters
 
         public Dictionary<int, Dictionary<string, int>> Faith = new Dictionary<int, Dictionary<string, int>>
         {
-            {1, new Dictionary<string, int> { { "Combat", 1}, {"Strength", 4} } },
-            {2, new Dictionary<string, int> { { "Combat", 1}, {"Strength", 4}, {"Armor", 1} } }
+            {1, new Dictionary<string, int> { { "Combat", 1}, {"Attack", 4} } },
+            {2, new Dictionary<string, int> { { "Combat", 1}, { "Attack", 4}, {"Armor", 1} } }
         };
 
         //TODO Faith Attributes
