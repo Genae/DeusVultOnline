@@ -12,7 +12,8 @@ require.config({
         "app": 'app/app',
 
         //controllers
-        "mainController": 'app/controllers/mainController',
+        "homeController": 'app/controllers/homeController',
+        "militaryConfigurationController": 'app/controllers/militaryConfigurationController',
         "loginController": 'app/controllers/loginController',
 
         //services

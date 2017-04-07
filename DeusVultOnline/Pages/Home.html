@@ -1,19 +1,4 @@
-<h1>Configure your Troops</h1>
-<table class="col-md-12">
-    <tr width="100%">
-        <td width="20%">
-            <span>Name: </span>
-        </td>
-        <td width="50%">
-            <input class="form-control" type="text" ng-model="troopName" ng-value="troopName">
-        </td>
-        <td width="30%" style="margin-left: 10px; border-left: 2px solid; padding-left: 5px; display: inline-block;" ng-style="{'border-color': troopName.length > 0 ? 'green' : 'red'}">
-            <span>Insert name for Troop </span>
-        </td>
-    </tr>
-</table>
-<select class="form-control" ng-model="selectedItem" ng-options="item as item.Name for item in items">
-</select>
+
 <svg height="210" width="500" style="background-color: black">
     <polygon points="{{province.polygon}}" class="province" ng-repeat="province in provinces" ng-click="clicked(province)" ng-style="{'fill': province.color}"/>
 </svg>

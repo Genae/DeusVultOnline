@@ -135,9 +135,11 @@
     <Content Include="index.html" />
     <Content Include="Pages\Home.html" />
     <Content Include="Pages\Login.html" />
+    <Content Include="Pages\MilitaryConfiguration.html" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\controllers\loginController.js" />
-    <Content Include="Scripts\app\controllers\mainController.js" />
+    <Content Include="Scripts\app\controllers\homeController.js" />
+    <Content Include="Scripts\app\controllers\militaryConfigurationController.js" />
     <Content Include="Scripts\app\services\accountService.js" />
     <Content Include="Scripts\app\services\troopsService.js" />
     <Content Include="Scripts\vendors\angular\angular-resource.min.js" />

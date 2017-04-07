@@ -9,8 +9,13 @@
     <script src="Scripts/vendors/signalr/jquery.signalR-2.2.1.min.js"></script>
     <script src="/signalr/hubs"></script>
     <script src="Scripts/vendors/require/require.js" data-main="Scripts/main.js"></script>
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+        }
+    </style>
 </head>
-<body class="container">
+<body class="container ng-cloak">
     <div ng-view></div>
 </body>
 </html>
