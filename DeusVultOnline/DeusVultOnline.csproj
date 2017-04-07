@@ -140,6 +140,9 @@
     <Content Include="Scripts\app\controllers\loginController.js" />
     <Content Include="Scripts\app\controllers\homeController.js" />
     <Content Include="Scripts\app\controllers\militaryConfigurationController.js" />
+    <Content Include="Scripts\app\directives\emblem\emblemController.js" />
+    <Content Include="Scripts\app\directives\emblem\emblemDirective.js" />
+    <Content Include="Scripts\app\directives\emblem\emblemTemplate.html" />
     <Content Include="Scripts\app\services\accountService.js" />
     <Content Include="Scripts\app\services\troopsService.js" />
     <Content Include="Scripts\vendors\angular\angular-resource.min.js" />

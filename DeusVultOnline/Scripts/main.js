@@ -15,6 +15,11 @@ require.config({
         "homeController": 'app/controllers/homeController',
         "militaryConfigurationController": 'app/controllers/militaryConfigurationController',
         "loginController": 'app/controllers/loginController',
+        "characterController": 'app/controllers/characterController',
+
+        //directives
+        "emblemController": 'app/directives/emblem/emblemController',
+        "emblemDirective": 'app/directives/emblem/emblemDirective',
 
         //services
         "troopsService": 'app/services/troopsService',

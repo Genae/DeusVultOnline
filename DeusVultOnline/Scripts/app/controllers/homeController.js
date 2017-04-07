@@ -1,4 +1,4 @@
-define(['app', 'troopsService'], function (app) {
+define(['app', 'troopsService', 'emblemDirective'], function (app) {
     app.controller("homeController", function ($scope, troopsService) {
 
         $scope.provinces = [

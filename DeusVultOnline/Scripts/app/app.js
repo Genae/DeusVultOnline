@@ -28,6 +28,10 @@ define(['angularAMD', 'angularRoute'], function (angularAMD) {
             templateUrl: 'Pages/MilitaryConfiguration.html',
             controller: 'militaryConfigurationController'
         }));
+        $routeProvider.when("/character", angularAMD.route({
+            templateUrl: 'Pages/Character.html',
+            controller: 'characterController'
+        }));
         $routeProvider.otherwise("/home");
         $httpProvider.interceptors.push(interceptor);
     });

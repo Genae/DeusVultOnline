@@ -1,4 +1,3 @@
-﻿using System;
 using System.Collections.Generic;
 
 namespace DeusVultOnline.Battleground
@@ -62,7 +61,6 @@ namespace DeusVultOnline.Battleground
             if (pos.X >= 0 && pos.X < Size && pos.Y >= 0 && pos.Y < Size) return true;
             return false;
         }
-        
 
     }
 }
