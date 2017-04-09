@@ -18,14 +18,12 @@ namespace DeusVultOnline.Characters
             {1, 0},
             {2, 0},
             {3, 1},
-            {4, 1}
+            {4, 2},
+            {5, 3},
+            {6, 4}
         };
 
-        public Dictionary<int, Dictionary<string, int>> Faith = new Dictionary<int, Dictionary<string, int>>
-        {
-            {1, new Dictionary<string, int> { { "Combat", 1}, {"Attack", 4} } },
-            {2, new Dictionary<string, int> { { "Combat", 1}, { "Attack", 4}, {"Armor", 1} } }
-        };
+        public Dictionary<int, Dictionary<string, int>> Faith = new Dictionary<int, Dictionary<string, int>>();
 
         //TODO Faith Attributes
     }
