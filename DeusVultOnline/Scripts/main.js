@@ -20,6 +20,8 @@ require.config({
         //directives
         "emblemController": 'app/directives/emblem/emblemController',
         "emblemDirective": 'app/directives/emblem/emblemDirective',
+        "resourceHeaderController": 'app/directives/resourceHeader/resourceHeaderController',
+        "resourceHeaderDirective": 'app/directives/resourceHeader/resourceHeaderDirective',
 
         //services
         "troopsService": 'app/services/troopsService',

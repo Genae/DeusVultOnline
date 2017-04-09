@@ -145,6 +145,9 @@
     <Content Include="Scripts\app\directives\emblem\emblemController.js" />
     <Content Include="Scripts\app\directives\emblem\emblemDirective.js" />
     <Content Include="Scripts\app\directives\emblem\emblemTemplate.html" />
+    <Content Include="Scripts\app\directives\resourceHeader\resourceHeaderController.js" />
+    <Content Include="Scripts\app\directives\resourceHeader\resourceHeaderDirective.js" />
+    <Content Include="Scripts\app\directives\resourceHeader\resourceHeaderTemplate.html" />
     <Content Include="Scripts\app\services\accountService.js" />
     <Content Include="Scripts\app\services\troopsService.js" />
     <Content Include="Scripts\vendors\angular\angular-resource.min.js" />

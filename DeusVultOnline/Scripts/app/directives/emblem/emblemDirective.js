@@ -5,7 +5,7 @@ define(['angularAMD', 'emblemController'], function (angularAMD) {
             templateUrl: "Scripts/app/directives/emblem/emblemTemplate.html",
             scope: {
                 emblemNum: '@',
-                backgroundColor: '@',
+                backgroundcolor: '@',
                 color1: '@',
                 color2: '@'
             }

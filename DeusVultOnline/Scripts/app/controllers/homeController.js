@@ -1,9 +1,24 @@
-define(['app', 'troopsService', 'emblemDirective'], function (app) {
-    app.controller("homeController", function ($scope, troopsService) {
+define(['app', 'troopsService', 'emblemDirective', 'resourceHeaderDirective'], function (app) {
+    app.controller("homeController", function ($scope, $location, troopsService) {
 
         $scope.provinces = [
             { polygon: "200,10 250,190 160,210", name: "Erzburg", color: "rgb(100,0,100)" },
             { polygon: "200,10 160,210 140,150 100,160", name: "Hotzewotz", color: "rgb(100,100,100)" }
+        ];
+
+        $scope.resources = [
+            {
+                name: "gold",
+                amount: 100
+            },
+            {
+                name: "prestige",
+                amount: 10
+            },
+            {
+                name: "piety",
+                amount: 5
+            }
         ];
 
         troopsService.ArmyGroup.get({ id: "asdf" }, processArmyGroupRequest);
@@ -34,6 +49,10 @@ define(['app', 'troopsService', 'emblemDirective'], function (app) {
             }
 
         }
+        $scope.go = function(url) {
+            $location.path(url);
+        }
+
 
     });
 });
