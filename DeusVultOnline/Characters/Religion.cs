@@ -8,9 +8,12 @@ namespace DeusVultOnline.Characters
 
         public Dictionary<int, string> RankName = new Dictionary<int, string>
         {
-            {1, "Servant"},
-            {2, "Priest"},
-            {3, "High Priest"}
+            {1, "Follower"},
+            {2, "Servant"},
+            {3, "Priest"},
+            {4, "High Priest"},
+            {5, "Apostel"},
+            {6, "Prophet"}
         };
 
         public Dictionary<int, int> SpellLevel = new Dictionary<int, int>
